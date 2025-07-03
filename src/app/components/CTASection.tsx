@@ -25,27 +25,29 @@ export default function CTASection() {
   }, [])
 
   const decorativeElements = [
-    { top: "10%", left: "10%", size: 100, rotation: 45 }, 
-    { top: "10%", right: "10%", size: 50, rotation: 0 }, 
-    { bottom: "10%", left: "10%", size: 50, rotation: 30 }, 
-    { bottom: "10%", right: "10%", size: 100, rotation: 60 },
+    { top: "10%", left: "10%", size: 80, sizeMobile: 40, rotation: 45 }, 
+    { top: "10%", right: "10%", size: 50, sizeMobile: 30, rotation: 0 }, 
+    { bottom: "10%", left: "10%", size: 50, sizeMobile: 30, rotation: 30 }, 
+    { bottom: "10%", right: "10%", size: 80, sizeMobile: 40, rotation: 60 },
   ]
 
   return (
     <section
       ref={sectionRef}
-      className="w-full py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8 bg-black text-white relative overflow-hidden flex items-center justify-center"
+      className="w-full py-12 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8 bg-black text-white relative overflow-hidden flex items-center justify-center"
     >
-      <div className="relative max-w-5xl w-full bg-[#0E0E0E] p-8 sm:p-12 md:p-20 rounded-2xl mx-auto text-center overflow-hidden">
-      <div
-        className="absolute inset-0 z-0"
-        style={{
+      <div className="relative max-w-5xl w-full bg-[#0E0E0E] p-6 sm:p-10 md:p-20 rounded-2xl mx-auto text-center overflow-hidden">
+      
+        {/* Ajuste do blur: menor no mobile */}
+        <div
+          className="absolute top-0 right-0 w-2/3 sm:w-full h-2/3 sm:h-full z-0"
+          style={{
             backgroundImage: "url('/blur.png')",
             backgroundSize: "cover",
-            backgroundPosition: "top rigth", 
+            backgroundPosition: "top right",
             filter: "blur(24px)",
             opacity: 0.3,
-        }}
+          }}
         ></div>
 
         {decorativeElements.map((element, i) => (
@@ -70,7 +72,15 @@ export default function CTASection() {
               alt="Star decorative"
               width={element.size}
               height={element.size}
-           
+              className="block sm:hidden"
+              style={{ width: element.sizeMobile, height: element.sizeMobile }}
+            />
+            <Image
+              src="/star2.svg"
+              alt="Star decorative"
+              width={element.size}
+              height={element.size}
+              className="hidden sm:block"
             />
           </div>
         ))}
@@ -81,7 +91,7 @@ export default function CTASection() {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"
             }`}
             style={{
-              fontSize: "clamp(1.75rem, 4vw, 2.25rem)",
+              fontSize: "clamp(1.5rem, 4vw, 2.25rem)",
               transitionDelay: "0.2s",
             }}
           >
@@ -92,7 +102,7 @@ export default function CTASection() {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"
             }`}
             style={{
-              fontSize: "clamp(1.5rem, 3.5vw, 2rem)",
+              fontSize: "clamp(1rem, 3.5vw, 2rem)",
               transitionDelay: "0.4s",
             }}
           >
@@ -107,7 +117,7 @@ export default function CTASection() {
               transitionDelay: "0.6s",
             }}
           >
-            <button className="px-8 sm:px-10 py-3 sm:py-4 rounded-full bg-white text-black font-medium hover:bg-neutral-200 hover:scale-105 hover:shadow-lg hover:shadow-white/30 transition-all duration-300 text-base sm:text-lg">
+            <button className="px-6 sm:px-10 py-3 sm:py-4 rounded-full bg-white text-black font-medium hover:bg-neutral-200 hover:scale-105 hover:shadow-lg hover:shadow-white/30 transition-all duration-300 text-sm sm:text-base">
               Create an Account
             </button>
           </div>
