@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Manrope, Poppins } from "next/font/google";
+import { Manrope } from "next/font/google";
 import "./globals.css";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
 
 const monrope = Manrope({
   variable: "--font-manrope",
