@@ -29,7 +29,7 @@ export default function AudioSection() {
       <div className="max-w-3xl w-full mx-auto mb-10 sm:mb-20">
         <div className="text-center mb-8 sm:mb-12">
           <h2
-            className={`font-medium mb-3 sm:mb-4 transition-all duration-1000 ${isVisible ? "animate-text-reveal" : ""}`}
+            className={`font-semibold mb-3 sm:mb-4 transition-all duration-1000 ${isVisible ? "animate-text-reveal" : ""}`}
             style={{
               fontSize: "clamp(1.5rem, 4vw, 2.25rem)",
               animationDelay: "0.2s",
@@ -51,7 +51,7 @@ export default function AudioSection() {
         </div>
       </div>
 
-      <div className="max-w-5xl w-full mx-auto bg-[#181818] p-4 sm:p-8 md:p-12 rounded-2xl shadow-lg">
+      <div className="max-w-5xl w-full mx-auto bg-[#181818] p-6 sm:p-8 md:p-12 rounded-2xl shadow-lg">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div
             className={`${isVisible ? "animate-text-reveal" : ""}`}
@@ -61,7 +61,7 @@ export default function AudioSection() {
             }}
           >
             <h3
-              className="font-medium mb-4 sm:mb-6"
+              className="font-semibold mb-4 sm:mb-6"
               style={{
                 fontSize: "clamp(1.25rem, 3vw, 1.7rem)",
               }}

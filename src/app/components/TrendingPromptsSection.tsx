@@ -31,7 +31,7 @@ export default function TrendingPromptsSection() {
     >
       <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16">
         <h2
-          className={`font-medium mb-4 sm:mb-6 transition-all duration-1000 ${isVisible ? "animate-text-reveal" : ""}`}
+          className={`font-semibold mb-4 sm:mb-6 transition-all duration-1000 ${isVisible ? "animate-text-reveal" : ""}`}
           style={{
             fontSize: "clamp(1.75rem, 4vw, 2.25rem)",
             animationDelay: "0.2s",

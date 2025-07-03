@@ -68,7 +68,7 @@ export default function FeaturesSection() {
             More features
           </h2>
           <h3
-            className={`font-medium transition-all duration-1000 ${isVisible ? "animate-text-reveal" : ""}`}
+            className={`font-semibold transition-all duration-1000 ${isVisible ? "animate-text-reveal" : ""}`}
             style={{
               fontSize: "clamp(1.75rem, 4vw, 2.25rem)",
               animationDelay: "0.4s",

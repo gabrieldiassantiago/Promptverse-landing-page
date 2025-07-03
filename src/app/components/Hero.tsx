@@ -118,7 +118,9 @@ export default function Hero() {
       ))}
 
       {/* conteud principal */}
-      <div className="relative  z-10 flex flex-col items-center text-center w-full max-w-7xl  mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
+      <div
+        style={{ transform: "translateY(-20px)" }} 
+      className="relative z-10 flex flex-col items-center text-center w-full max-w-7xl  mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
         <span
           className={`text-sm sm:text-base md:text-lg lg:text-xl font-medium text-white/90 mb-2 sm:mb-3 tracking-wider animate-text-reveal ${
             isLoaded ? "animate-bounce-soft" : ""
@@ -129,7 +131,7 @@ export default function Hero() {
         </span>
 
         <h1
-          className={`font-medium mb-4 sm:mb-6 leading-[1.1] sm:leading-tight animate-text-reveal ${
+          className={`font-semibold mb-4 sm:mb-6 leading-[1.1] sm:leading-tight animate-text-reveal ${
             isLoaded ? "animate-float" : ""
           }`}
           style={{
